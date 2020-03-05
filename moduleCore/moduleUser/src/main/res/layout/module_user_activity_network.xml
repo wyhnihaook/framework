@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--引入方法类-->
+        <import type="com.wyh.modulecommon.utils.SystemUtil" />
+
+        <!--引入实体类-->
+        <variable
+            name="detail"
+            type="com.wyh.modulecommon.network.bean.UpdateBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NetworkActivity">
+
+
+
+        <TextView
+            android:text="@{detail.description+SystemUtil.getVersion()}"
+            android:layout_marginTop="33dp"
+            android:id="@+id/tv_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击网络请求获取结果" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击跳转列表" />
+
+    </LinearLayout>
+</layout>

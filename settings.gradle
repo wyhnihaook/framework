@@ -1,0 +1,1 @@
+include ':app', ':moduleCore:moduleUser', ':modulePublic:moduleCommon', ':moduleSystem:moduleBase'

@@ -1,0 +1,22 @@
+Android快速开发框架整合包
+1、Router 路由框架 https://github.com/chenenyu/Router  ---ARouter https://github.com/alibaba/ARouter
+2、Fresco 图片加载框架
+3、Gson JSON解析
+4、SmartRefreshLayout 上拉加载下拉刷新
+5、OkHttp HTTPClient
+6、EventBus 事件发布/订阅框架
+7、ButterKnife DI注入框架
+8、retrofit HTTP基础框架
+9、RxPermissions 权限框架
+10、RxJava 链式调用框架
+11、AndroidAutoSize 屏幕适配:https://www.jianshu.com/p/12ce5c0a6163
+12、QMUI QQUI组件库 （For Ios,Android）：https://github.com/Tencent/QMUI_Android  -->需要时集成
+13、Rxlifecycle 处理RxJava可能导致的内存泄漏:https://www.jianshu.com/p/8311410de676
+14、ZXingLib 二维码识别库  -->需要时集成
+15、YogaLayout(Android), YogaKit(Ios) 布局框架   -->需要时集成
+16、组件化技术 https://www.cnblogs.com/milovetingting/p/10451195.html
+17、databinding 将数据和布局直接绑定，不用额外赋值  https://blog.csdn.net/xiaowu_zhu/article/details/91826467
+
+
+组件化PS:moduleCore用于业务逻辑块处理，modulePublic用于第三方插件以及网络请求等公共功能的抽取，moduleSystem用于存放数据库操作等；
+在根目录下新建Module并拖入对应新建文件夹，修改settings.gradle中引用路径,在module前加入文件夹名称即可

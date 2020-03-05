@@ -1,0 +1,3 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wyh.moduleuser" />
+<!--正式打包空实现，不需要参数配置-->

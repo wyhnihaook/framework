@@ -1,0 +1,84 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    resourcePrefix "module_public_" //强行限定创建的资源名称带public_前缀标识，避免文件冲突
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //为了让那个其他依赖都可以依赖ARouter所以不能用implementation，使用api进行依赖
+    api 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    //eventBus事件分发库
+    api 'de.greenrobot:eventbus:3.0.0-beta1'
+
+    //ButterKnife注解绑定界面数据引入
+    api 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+
+    //Gson解析json格式引入
+    api 'com.google.code.gson:gson:2.6.2'
+
+    //网络请求框架
+    api 'io.reactivex.rxjava2:rxjava:2.2.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.squareup.okhttp3:okhttp:3.4.1'
+    api 'com.squareup.retrofit2:retrofit:2.0.2'
+    api 'com.squareup.retrofit2:converter-gson:2.0.2'
+//    api 'com.squareup.retrofit2:adapter-rxjava:2.0.2'//-->废弃，使用rxjava2适配器
+    api 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+    //下拉刷新组件
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    api 'com.android.support:recyclerview-v7:28.0.0'
+
+    //动态授权
+    api 'pub.devrel:easypermissions:0.4.2'
+
+    //fresco网络图片加载框架
+    api 'com.facebook.fresco:fresco:0.12.0'
+    api 'com.facebook.fresco:imagepipeline-okhttp3:0.12.0'
+
+    //屏幕适配框架
+    api 'me.jessyan:autosize:1.1.2'
+
+    //RxJava内存泄漏处理
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- CircularProgressBar -->
+    <declare-styleable name="ModulePublicCircularProgressBar">
+        <attr name="module_public_cpbStyle" format="reference"/>
+        <attr name="module_public_cpb_color" format="color"/>
+        <attr name="module_public_cpb_colors" format="reference"/>
+        <attr name="module_public_cpb_stroke_width" format="dimension"/>
+        <attr name="module_public_cpb_min_sweep_angle" format="integer"/>
+        <attr name="module_public_cpb_max_sweep_angle" format="integer"/>
+        <attr name="module_public_cpb_sweep_speed" format="float"/>
+        <attr name="module_public_cpb_rotation_speed" format="float"/>
+    </declare-styleable>
+
+</resources>

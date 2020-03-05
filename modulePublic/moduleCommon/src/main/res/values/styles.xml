@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="module_public_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/module_public_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/module_public_colorPrimaryDark</item>
+        <item name="colorAccent">@color/module_public_colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <!--弹窗动画效果-->
+    <style name="module_public_dialogAnimBottomAndFade" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_fade_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_fade_out_bottom</item>
+    </style>
+
+
+    <!--自定义dialog-->
+    <style name="module_public_DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--  边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

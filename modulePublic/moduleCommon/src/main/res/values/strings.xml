@@ -1,0 +1,11 @@
+<resources>
+    <string name="module_public_app_name">moduleCommon</string>
+    <string name="module_public_common_loading_message">Loading...</string>
+    <string name="module_public_common_error_msg">Oops, something wrong!\nPlease hit the screen and try again~</string>
+    <string name="module_public_common_no_network_msg">No network connected!\nPlease hit the screen and try again after connecting~</string>
+    <string name="module_public_common_empty_msg">Oops, failed to resolve data\nPlease hit the screen and try again~</string>
+    <string name="module_public_network_error">网络无法连接，请联网后重试</string>
+    <string name="module_public_network_connect_out">网络无法连接，无法获取信息</string>
+    <string name="module_public_confirm">确定</string>
+    <string name="module_public_empty"></string>
+</resources>
